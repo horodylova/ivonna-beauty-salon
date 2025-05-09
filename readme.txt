@@ -1,7 +1,5 @@
 # Yvonne Hair and Makeup - Professional Website
 
-![Yvonne Hair and Makeup](images/logo.png)
-
 ## Overview
 
 This repository contains the complete codebase for Yvonne's professional hair and makeup artist website. The site is built using modern web technologies including Bootstrap 5, HTML5, CSS3, and JavaScript, providing a responsive, elegant experience that showcases Yvonne's services and portfolio.
@@ -10,7 +8,7 @@ This repository contains the complete codebase for Yvonne's professional hair an
 
 ## Live Demo
 
-Visit the live site at [yvonne-hairmakeup.com](https://www.yvonne-hairmakeup.com)
+Visit the live site at [yvonne-hairmakeup.com](https://ivonna-beauty-salon-production.up.railway.app/)
 
 ## Features
 
