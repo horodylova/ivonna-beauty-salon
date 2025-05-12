@@ -15,45 +15,42 @@
       layoutMode: 'masonry'
     });
 
-
-    // Initialize Isotope
+ 
     var $container = $('.isotope-container').isotope({
-      // options
+ 
       itemSelector: '.item',
       layoutMode: 'masonry'
     });
 
     $(document).ready(function () {
-      //active button
+ 
       $('.filter-button').click(function () {
         $('.filter-button').removeClass('active');
         $(this).addClass('active');
       });
     });
 
-    // Filter items on button click
+ 
     $('.filter-button').click(function () {
       var filterValue = $(this).attr('data-filter');
       if (filterValue === '*') {
-        // Show all items
+ 
         $container.isotope({ filter: '*' });
       } else {
-        // Show filtered items
+ 
         $container.isotope({ filter: filterValue });
       }
     });
 
   });
-
-  // init Chocolat light box
+ 
   var initChocolat = function () {
     Chocolat(document.querySelectorAll('.image-link'), {
       imageSize: 'contain',
       loop: true,
     })
   }
-
-  // init jarallax parallax
+ 
   var initJarallax = function () {
     jarallax(document.querySelectorAll(".jarallax"));
 
@@ -99,7 +96,6 @@
     });
 
 
-    // product single page
     var thumb_slider = new Swiper(".product-thumbnail-slider", {
       loop: true,
       slidesPerView: 3,
@@ -153,9 +149,18 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+  
+      touchEventsTarget: 'container', 
+      touchRatio: 1, 
+      touchAngle: 45, 
+      preventClicks: false, 
+      preventClicksPropagation: false, 
+      cssMode: false, 
+      resistanceRatio: 0,
+      allowTouchMove: true,
     });
 
-    // Animate on Scroll
+ 
     AOS.init({
       duration: 1000,
       once: true,
@@ -173,6 +178,7 @@
 
 
 
-  }); // End of a document
+  });  
 
 })(jQuery);
+ 
