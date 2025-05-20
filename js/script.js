@@ -15,42 +15,36 @@
       layoutMode: 'masonry'
     });
 
- 
     var $container = $('.isotope-container').isotope({
- 
       itemSelector: '.item',
       layoutMode: 'masonry'
     });
 
     $(document).ready(function () {
- 
       $('.filter-button').click(function () {
         $('.filter-button').removeClass('active');
         $(this).addClass('active');
       });
     });
 
- 
     $('.filter-button').click(function () {
       var filterValue = $(this).attr('data-filter');
       if (filterValue === '*') {
- 
         $container.isotope({ filter: '*' });
       } else {
- 
         $container.isotope({ filter: filterValue });
       }
     });
 
   });
- 
+
   var initChocolat = function () {
     Chocolat(document.querySelectorAll('.image-link'), {
       imageSize: 'contain',
       loop: true,
     })
   }
- 
+
   var initJarallax = function () {
     jarallax(document.querySelectorAll(".jarallax"));
 
@@ -84,6 +78,29 @@
 
   }
 
+  function initGallerySwiper() {
+    var gallerySwiper = new Swiper('.gallery-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  }
 
   $(document).ready(function () {
 
@@ -94,7 +111,6 @@
         prevEl: ".main-slider-button-prev",
       },
     });
-
 
     var thumb_slider = new Swiper(".product-thumbnail-slider", {
       loop: true,
@@ -113,7 +129,6 @@
         swiper: thumb_slider,
       },
     });
-
 
     var swiper = new Swiper(".swiper-carousel", {
       slidesPerView: 5,
@@ -149,18 +164,17 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-  
-      touchEventsTarget: 'container', 
-      touchRatio: 1, 
-      touchAngle: 45, 
-      preventClicks: false, 
-      preventClicksPropagation: false, 
-      cssMode: false, 
+
+      touchEventsTarget: 'container',
+      touchRatio: 1,
+      touchAngle: 45,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      cssMode: false,
       resistanceRatio: 0,
       allowTouchMove: true,
     });
 
- 
     AOS.init({
       duration: 1000,
       once: true,
@@ -175,10 +189,8 @@
     initChocolat();
     initJarallax();
     initProductQty();
+    initGallerySwiper();
 
-
-
-  });  
+  });
 
 })(jQuery);
- 

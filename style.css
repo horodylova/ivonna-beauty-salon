@@ -783,3 +783,25 @@ iconify-icon.quote {
     width: 50%;
   }
 }
+
+
+/* Slider for Gallery  */
+
+.gallery-img {
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  background:  var(--light-color);
+}
+ 
+
+@media (max-width: 600px) {
+  .gallery-img {
+    max-width: 100%;
+    height: 250px;
+  }
+}
+ 
